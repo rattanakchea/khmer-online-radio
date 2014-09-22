@@ -1,5 +1,11 @@
 [
     {
+        "name": "Komsan Radio",
+        "description": "Komsan Radio Station",
+        "image": "img/kamsanfm.png",
+        "url" : "http://sc-vayo4.khmerlive.tv:8000/listen.pls/;stream&type=mp3"
+    },
+    {
         "name": "Hot FM 107",
         "description": "Hot FM 107",
         "image": "img/hotfm107.png",
@@ -7,10 +13,10 @@
     },
     
     {
-        "name": "Komsan FM 94.5",
-        "description": "Komsan FM 94.5",
-        "image": "img/kamsanfm.png",
-        "url" : "http://sc-vayo4.khmerlive.tv:8000/;stream"
+        "name": "HM 104.5",
+        "description": "HM 104.5",
+        "image": "img/hmfm104.png",
+        "url" : "http://111.92.240.134:89/broadwavehigh.mp3?src=1/;stream&type=mp3"
     },
     
     {
@@ -26,7 +32,7 @@
         "image": "img/rhmfm957.png",
         "url" : "http://111.92.240.134:90/broadwavehigh.mp3"
     },
-     {
+    {
         "name": "Vayo FM",
         "description": "Vayo FM",
         "image": "img/vayo.png",

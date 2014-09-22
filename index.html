@@ -12,25 +12,38 @@ and open the template in the editor.
         <!--        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
                 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
                 <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>-->
-
+        
+        <link rel="stylesheet" href="css/khmer-online-radio.css" />
+        
         <link rel="stylesheet" href="css/jquery.mobile-1.4.3.css" />
-        <script src="js/jquery.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--        <script src="js/jquery.js"></script>-->
         <script src="js/jquery.mobile-1.4.3.js"></script>
         <script src="application.js"></script>
     </head>
     <body>
+       
         <div data-role="page" id="home" data-theme="a">
+             
             <div data-role="header" class="ui-bar-b">
                 <h1>Khmer Online Radio</h1>
             </div><!-- /header -->
 
-
-            <audio class="audioDemo" controls="controls" src="">              
-            </audio>
+            <div id="audio">
+                <audio class="audioDemo" controls="controls"
+                       src="http://112.121.150.133:9308/;stream.nsv"
+                       onloadeddata="app.loadeddata()"
+                       onerror="app.onerror()"
+                       onwaiting="app.onwaiting()"
+                       >              
+                </audio>
+                <span id="loading"><img src="img/loading.gif" title="loading" />Loading...</span>
+                <span id="panel"></span>
+            </div>
 
             <div data-role="main" class="ui-content">
                 <ul id="radioList" data-role="listview" class="station">
-                    
+
                 </ul>
             </div>
 
@@ -39,13 +52,12 @@ and open the template in the editor.
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about" data-rel="dialog">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!--        end home page-->
-        
+
         <!-- Start of about page -->
         <div data-role="page" id="about" data-theme="a">
             <div data-role ="header">
@@ -56,51 +68,8 @@ and open the template in the editor.
                 <p>Please rate our application and visit our website for more information.</p>
                 <p><a href="http://www.essentialtutorial.com">Khmer Online Radio</a></p>
             </div>
-            
+
         </div>
-        
-        
-        <!-- Start of third page: #contact -->
-        <div data-role="page" id="contact" data-title="Contact Us">
-            <div role="main" class="ui-content">
-                <h2 style="text-align: center;">Contact Us</h2>
-                <form action="processForm.php" method="post" data-transition="pop">
-                    <div class="ui-field-contain">
-                        <label for="senderName">Your Name:</label>
-                        <input type="text" name="senderName" id="senderName">
-                    </div>
-                    <div class="ui-field-contain">
-                        <label for="senderEmail">Your Email Address:</label>
-                        <input type="email" name="senderEmail" id="senderEmail">
-                    </div>
-                    <div class="ui-field-contain">
-                        <label for="productCategories">What product categories are you 
-                            interested in?</label>
-                        <select name="productCategories[]" id="productCategories" 
-                                multiple data-native-menu="false">
-                            <option value="">Select...</option>
-                            <option value="Lamps">Lamps</option>
-                            <option value="Kitchen Equipment">Kitchen Equipment</option>
-                        </select>
-                    </div>
-                    <div class="ui-field-contain">
-                        <label for="message">Your Message:</label>
-                        <textarea name="message" id="message" placeholder="Please type your message" required="required" cols="80" rows="10" maxlength="10000">
-                        </textarea>
-                    </div>
-                    <input type="submit" name="sendMessage" id="sendMessage" 
-                           value="Send Email">
-                </form>
-            </div>
-            <div data-role="footer" data-position="fixed" data-theme="a">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
     </body>
 </html>
